@@ -1,0 +1,9 @@
+# Frama-C session data (WP cache, generated goals, GUI state)
+.frama-c/
+# Keep interactive proof scripts if you add them via ivette:
+# !.frama-c/wp/
+# .frama-c/wp/*
+# !.frama-c/wp/script/
+
+# Compiled binary
+filter
