@@ -6,4 +6,4 @@
 # !.frama-c/wp/script/
 
 # Compiled binary
-filter
+filter.out
