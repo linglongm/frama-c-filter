@@ -53,7 +53,7 @@ void filter(int n, int * in, int *nout, int * out) {
       // assert A2: CountNZ{Pre}(i+1, in) == CountNZ{Pre}(i, in);
       // assert A2a: count == CountNZ{Pre}(i+1, in);
     }
-    // in{beofre} == 
+    // in{beofre} ==
   }
   // assert END1: CountNZ{Pre}(n, in) == count;
   *nout = count;
