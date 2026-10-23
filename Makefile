@@ -1,6 +1,7 @@
 SRC      := filter.c
 PROVERS  ?= alt-ergo
 TIMEOUT  ?= 30
+SESSION  := lemma-rocq
 WP       := frama-c -wp -wp-prover $(PROVERS) -wp-timeout $(TIMEOUT)
 
 .PHONY: all prove lemmas filter gui run clean
@@ -10,9 +11,9 @@ all: prove
 # Prove lemmas, then the filter function
 prove: lemmas filter
 
-# Prove only the lemmas
+# Check the lemmas' Coq proofs saved in $(SESSION)/interactive/ (batch mode)
 lemmas:
-	$(WP) -wp-prop=@lemma $(SRC)
+	frama-c -wp -wp-prop @lemma -wp-prover coq -wp-session $(SESSION) $(SRC)
 
 # Prove only the filter function (with RTE guards)
 filter:

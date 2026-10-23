@@ -7,3 +7,6 @@
 
 # Compiled binary
 filter.out
+
+# Rocq lia/nia tactic caches
+*.cache
